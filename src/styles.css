@@ -103,6 +103,10 @@
   --gradient-hero: radial-gradient(ellipse at top, oklch(0.3 0.08 80 / 0.35), transparent 65%);
   --shadow-glow: 0 0 40px oklch(0.74 0.12 80 / 0.4);
   --shadow-glow-strong: 0 0 60px oklch(0.74 0.12 80 / 0.6);
+  --cta: oklch(0.7 0.19 39);
+  --cta-foreground: oklch(1 0 0);
+  --shadow-cta: 0 0 40px oklch(0.7 0.19 39 / 0.5);
+  --shadow-cta-strong: 0 0 60px oklch(0.7 0.19 39 / 0.7);
 }
 
 @theme inline {
@@ -143,6 +147,10 @@
   .shadow-glow-strong {
     box-shadow: var(--shadow-glow-strong);
   }
+  .bg-cta { background-color: var(--cta); }
+  .text-cta-foreground { color: var(--cta-foreground); }
+  .shadow-cta { box-shadow: var(--shadow-cta); }
+  .shadow-cta-strong { box-shadow: var(--shadow-cta-strong); }
   .text-balance {
     text-wrap: balance;
   }
@@ -150,11 +158,11 @@
 
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 30px oklch(0.74 0.12 80 / 0.5), 0 0 60px oklch(0.74 0.12 80 / 0.25);
+    box-shadow: 0 0 30px oklch(0.7 0.19 39 / 0.55), 0 0 60px oklch(0.7 0.19 39 / 0.25);
     transform: scale(1);
   }
   50% {
-    box-shadow: 0 0 50px oklch(0.74 0.12 80 / 0.85), 0 0 100px oklch(0.74 0.12 80 / 0.4);
+    box-shadow: 0 0 50px oklch(0.7 0.19 39 / 0.9), 0 0 100px oklch(0.7 0.19 39 / 0.4);
     transform: scale(1.02);
   }
 }
